@@ -226,12 +226,12 @@ a{
 
 /* contact page styling */
 
-.details{
+/* .details{
     position: absolute;
     transform: translateY();
     width: 100%;
     padding: 0 20px;
-}
+} */
 .contact-form{
     max-width:550px;
     margin: 0 auto;
@@ -258,4 +258,14 @@ h1{
     height: 3px;
     background: red;
     transform: translateX(-50%);
+}
+
+
+/* footer styling */
+footer{
+    background: red;
+    padding: 20px;
+}
+footer span{
+    color: black;
 }
