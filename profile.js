@@ -43,3 +43,18 @@
     };
     xhr.send(data);
   }
+  
+
+
+ /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+ const showMenu = (toggleId, navId) =>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId)
+
+  if(toggle && nav){
+      toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('show')
+      })
+  }
+}
+showMenu('toggle','nav-menu')

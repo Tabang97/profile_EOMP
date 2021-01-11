@@ -2,18 +2,59 @@
     /* padding: 0; */
     /* margin: 0; */
     text-decoration: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* padding:0 ; */
+    margin: 0;
 }
 body{
+    /* width: 100%; */
+    scroll-behavior: smooth;
     margin: 0;
-    background: black;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
+html, body, .wrapper{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
 /* NAVBAR styling */
-header{
-    background: red;
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px){
+  .nav-menu{
+    position: fixed;
+    /* top: var(--header-height); */
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    /* background-color: var(--second-color); */
+    transition: .5s;
+  }
+}
+.nav-item{
+  margin-bottom: var(--mb-4);
+}
+
+
+/* header{
+    flex-wrap: wrap;
+    display: inline;
+    z-index: 1;
+    background: rgb(124, 119, 119);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100px;
 }
 header::after{
     content: '';
@@ -25,13 +66,49 @@ label.logo{
     font-size: 35px;
     line-height: 50px;
     padding: 0 100px;
-    font-weight: bold;
-}
+    font-weight: bold; */
+/* } */
 
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
+
+
+
+
+
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .main.responsive {position: relative;}
+    .main.responsive nav.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .main.responsive nav {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .main nav:not(:first-child) {display: none;}
+    .main nav.icon {
+      float: right;
+      display: block;
+    }
+  }  
+  
+  
+
+  
+
+
+
+
+
+
+
 nav ul li {
     display: inline-block;
     margin: 0 5px;
@@ -56,32 +133,51 @@ nav ul li a{
 /* landing page styling */
 .home{
     display: flex;
-    color: red;
+    background: rgb(124, 119, 119);
+    color: red(124, 119, 119);
     height: 100vh;
     min-height: 500px;
-    /* background: url("images/Tabang Duda (3.).jpg") no-repeat; */
+
 }
-.home .max-width{
-    margin: auto 0 auto 40px;
+.home .max{
+    /* margin: auto 0 auto 60px; */
 }
 .home .landing .text1{
+    flex-wrap: wrap;
     font-size: 30px;
+    width: 100vw;
+
 }
 .home .landing .text2{
+    width: 100vw;
     font-size: 80px;
     font-weight: 600;
 }
 .home .landing .text3{
+    width: 100vw;
     font-size: 40px;
     margin: 5px 0;
 }
-.picture{
-    float: right;
+
+.picture img{
+    border-radius: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
-
 /* about page styling */
+.about{
+    background: white(124, 119, 119);
+
+}
+.Me img{
+    margin: 0 auto;
+}
 section{
     padding:100px 0 ;
 }
@@ -106,36 +202,34 @@ section{
 .about-content{
     display: flex;
     /* flex-wrap: wrap; */
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    /* margin: auto 90px; */
 }
-.about .about-content .column {
-    width: 100%;
-}
-.about .about-content .right {
-    width: 100%;
-}
-.about .about-content .left {
+.about .about-content .pic {
     display: flex;
-    justify-content: center;
     margin: 0 auto 60px;
+    width: 100%;
 }
 
-.about .about-content .left img{
+
+.about .about-content  img{
     height: 400px;
-    width: 400px;
+    /* width: 300px; */
     object-fit: cover;
 }
-.text{
+.bout .text{
     font-weight:600 ;
-    color: red;
+    color: rgb(61, 59, 59);
     font-size: 30px;
 }
-p{
-    color: red;
+.bout p{
+    color: black;
     font-weight: bold;
+    /* padding-right: 300px; */
 }
-a{
+.bout a{
     display: inline-block;
     background: red;
     color: black;
@@ -146,7 +240,23 @@ a{
 }
 
 
+
 /* my skills page styling */
+.skills{
+    background: black;
+}
+
+.skills .port{
+    max-width: 60vw;
+    margin: 0 auto;
+    background: black;
+
+}
+.skills-content .text{
+    color: red;
+    text-align: center;
+    margin: 40px;
+}
 .skills .title::before{
     content: "";
     position: absolute;
@@ -157,8 +267,14 @@ a{
     background: red;
     transform: translateX(-50%);
 }
-.skills .skills-content .column{
+/* .skills .skills-content .column{
     width: calc(50% - 30px);
+} */
+
+.skilling{
+    font-weight:600 ;
+    color: red;
+    font-size: 30px;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
@@ -202,18 +318,81 @@ a{
     width: 50%;
 }
 .skills-content .right .mysql::before{
-    width: 40%;
+    width: 50%;
 }
 
 
 
 /* projects page styling */
-.projects .carasouel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
+
+.projects{
+    background: white;
+
 }
+.container{
+    /* width: 900px; */
+    min-height: 500px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: green;
+    margin: 40px;
+    display: inline-block;
+}
+.container .box .imgbox{
+    position: relative;
+    overflow: hidden;
+}
+.container .box .imgbox img{
+    max-width: 100%;
+    transition: transform 2s;
+}
+.container .box:hover .imgbox img{
+    transform: scale(1);
+}
+
+.container .box .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background:rgba(0,0,0,.8);
+    transform: scaleY(0);
+    transition: transform .5s;
+}
+.container .box:hover .details{
+    transform: scaleY(1);
+
+}
+
+.container .box .details .content{
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    /* padding: 15px; */
+    color: white;
+}
+.container .box .details .content h2{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.container .box .details .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
 
 
 
@@ -226,23 +405,40 @@ a{
 
 /* contact page styling */
 
-/* .details{
-    position: absolute;
+.contacts{
+    background: black;
+
+}
+.details{
+    /* position: absolute; */
     transform: translateY();
     width: 100%;
-    padding: 0 20px;
-} */
+    /* padding: 0 20px; */
+}
+.contact-form label{
+    text-align: center;
+    width: 100%;
+}
+
+.contact-form input{
+    width: 100%;
+    height: 34px;
+}
+.contact-form textarea{
+    width: 100%;
+    height: 100px;
+}
 .contact-form{
-    max-width:550px;
+    /* max-width:50%; */
     margin: 0 auto;
     background: black;
-    padding: 50px;
-    border-radius: 5px;
+    /* padding: 50px; */
+    /* border-radius: 5px; */
     display: flex;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 20px;
 }
 .contacts{
-    color: RED;
+    color: white;
 }
 h1{
     text-align: center;
@@ -256,16 +452,55 @@ h1{
     left: 50%;
     width: 230px;
     height: 3px;
-    background: red;
+    background: black;
     transform: translateX(-50%);
 }
+.icons{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.icons ul li{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0px 10px;
+    font-size: 50px;
+    line-height: 100px;
+    display: inline-block;
+}
+
 
 
 /* footer styling */
 footer{
-    background: red;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(124, 119, 119);
+    /* padding: 20px; */
+    /* width: 100vw; */
+    /* width: 1837px; */
+
 }
 footer span{
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
