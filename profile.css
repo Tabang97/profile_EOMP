@@ -107,7 +107,9 @@ label.logo{
 
 
 
-
+.nav a{
+    color: black;
+}
 
 nav ul li {
     display: inline-block;
