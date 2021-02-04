@@ -1,9 +1,5 @@
 *{
-    /* padding: 0; */
-    /* margin: 0; */
     text-decoration: none;
-    /* box-sizing: border-box; */
-    /* padding:0 ; */
     margin: 0;
 }
 body{
@@ -21,8 +17,6 @@ html, body, .wrapper{
 }
 
 
-
-
 /* NAVBAR styling */
 .nav{
   display: flex;
@@ -32,7 +26,7 @@ html, body, .wrapper{
 @media screen and (max-width: 768px){
   .nav-menu{
     position: fixed;
-    /* top: var(--header-height); */
+    top: var(--header-height);
     right: -100%;
     width: 80%;
     height: 100%;
@@ -44,35 +38,6 @@ html, body, .wrapper{
 .nav-item{
   margin-bottom: var(--mb-4);
 }
-
-
-/* header{
-    flex-wrap: wrap;
-    display: inline;
-    z-index: 1;
-    background: rgb(124, 119, 119);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    height: 100px;
-}
-header::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-label.logo{
-    color:black;
-    font-size: 35px;
-    line-height: 50px;
-    padding: 0 100px;
-    font-weight: bold; */
-/* } */
-
-
-
-
-
 
 
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -90,27 +55,18 @@ label.logo{
     }
   }
   
-   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+   /* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     .main nav:not(:first-child) {display: none;}
     .main nav.icon {
       float: right;
       display: block;
     }
-  }  
-  
-  
-
-  
-
-
-
-
+  } 
 
 .nav a{
     color: black;
 }
-
 nav ul li {
     display: inline-block;
     margin: 0 5px;
@@ -141,11 +97,9 @@ nav ul li a{
     min-height: 500px;
 
 }
-.home .max{
-    /* margin: auto 0 auto 60px; */
-}
+
 .home .landing .text1{
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     font-size: 30px;
     width: 100vw;
 
@@ -224,21 +178,23 @@ section{
 .bout .text{
     font-weight:600 ;
     color: rgb(61, 59, 59);
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
 }
-.bout p{
+.bout{
     color: black;
     font-weight: bold;
-    /* padding-right: 300px; */
+    margin-right: 300px;
+    margin-left: 300px;
 }
-.bout a{
+.linking{
+    align-items: center;
     display: inline-block;
     background: red;
     color: black;
     border-radius: 6px;
     border: solid black;
     padding: 5px;
-    font-weight: 500;
 }
 
 
@@ -396,15 +352,6 @@ section{
 }
 
 
-
-
-
-
-
-
-
-
-
 /* contact page styling */
 
 .contacts{
@@ -419,7 +366,7 @@ section{
 }
 .contact-form label{
     text-align: center;
-    width: 100%;
+    width: 50%;
 }
 
 .contact-form input{
@@ -431,11 +378,11 @@ section{
     height: 100px;
 }
 .contact-form{
-    /* max-width:50%; */
+    max-width:50%;
     margin: 0 auto;
     background: black;
-    /* padding: 50px; */
-    /* border-radius: 5px; */
+    padding: 50px;
+    border-radius: 5px;
     display: flex;
     box-shadow: 0 0 20px;
 }
@@ -473,36 +420,13 @@ h1{
     display: inline-block;
 }
 
-
-
 /* footer styling */
 footer{
     display: flex;
     flex-wrap: wrap;
     background: rgb(124, 119, 119);
-    /* padding: 20px; */
-    /* width: 100vw; */
-    /* width: 1837px; */
 
 }
 footer span{
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
