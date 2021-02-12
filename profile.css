@@ -6,10 +6,11 @@
 body{
     /* margin: 0; */
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: black;
 }
 
 header{
@@ -56,7 +57,7 @@ header{
   
   .navbar #togglericon:checked:after {
     color: black;
-    border: 2px solid #f0f0f0;
+    border: 2px solid black;
   }
   
   .nav {
@@ -136,9 +137,7 @@ header{
     color: black;
     text-decoration: none;
     font-weight: normal;
-  }
-  
- 
+  } 
   .brand {
     display: inline-flex;
     align-items: center;
@@ -177,26 +176,21 @@ header{
       opacity: 1;
       box-shadow: none;
     }
-  }
-  
-  /* =====NAV END===== */
+}
+/* =====NAV END===== */
 
 
 /* =======landing page styling====== */
 
 .home{
-    /* display: flex; */
-    background: #34495e;
-    /* color: red(124, 119, 119); */
-    height: 100vh;
-    /* min-height: 500px; */
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("images/red.jpg");
+    height: 70vh;
     text-align: center;
+    padding-top: 20%;
+    padding-left: 30%;
 
-}
-.overlay-intro{
-    position: absolute;
-    padding: 0;
-    width: 100%;
 }
 .intro-title{
     color: white;
@@ -205,31 +199,64 @@ header{
 }
 .intro-sub{
     font-size: 1.5rem;
-}
-.intro-content{
-    margin-top: 30px;
+    color: white;
 }
 
-.picture img{
-    border-radius: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 270px;
-    top: 200px;
+/* =====ICONS==== */
+.social-menu ul{
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+.social-menu ul li .fa{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .6s;
+    color: black;
+}
+.social-menu ul li a{
+    position: relative;
+    display:block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:white;
+    transition: .6s;
+    box-shadow: 0 5px 4px black;
+}
+.social-menu ul li a:hover{
+    transform: translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #0077B5;
 }
 
 
-/* about page styling */
+
+
+/* ======ABOUT PAGE STYLING====== */
 .about{
-    background: aqua;
+    background: black;
 
 }
 .Me img{
     border-radius: 200px;
-    margin-left: auto;
-    margin-right: auto;
     width: 270px;
-    top: 200px;
+    object-fit: cover;
 }
 section{
     padding:100px 0 ;
@@ -242,45 +269,27 @@ section{
     margin-bottom: 60px;
     position: relative;
 }
-.about .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 200px;
-    height: 3px;
-    background: red;
-    transform: translateX(-50%);
-}
+
 .about-content{
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* margin: auto 90px; */
 }
 .about .about-content .pic {
-    display: flex;
     margin: 0 auto 60px;
-    width: 100%;
 }
 
-
-.about .about-content  img{
-    height: 400px;
-    /* width: 300px; */
-    object-fit: cover;
-}
 .bout .text{
-    font-weight:600 ;
-    color: rgb(61, 59, 59);
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
+    margin-top: 10px;
 }
+
 .bout{
-    color: black;
+    color: white;
     font-weight: bold;
+    font-size: 20px;
     margin-right: 300px;
     margin-left: 300px;
 }
@@ -288,30 +297,24 @@ section{
     align-items: center;
     display: inline-block;
     background: red;
-    color: black;
+    color: white;
+    font-weight: bold;
     border-radius: 6px;
-    border: solid black;
     padding: 5px;
 }
+/* ========END ABOUT STYLE======== */
 
 
-
-/* my skills page styling */
+/* =======SKILLS PAGE STYLE======== */
 .skills{
-    background: white;
+    background: black;
     min-height: 660px;
-
 }
-
 .skills .port{
     max-width: 60vw;
     margin: 0 auto;
-
-}
-.skills-content .text{
-    color: black;
-    text-align: center;
-    margin: 40px;
+    padding-top: inherit;
+    margin-top: 50px;
 }
 .skills .title::before{
     content: "";
@@ -320,35 +323,32 @@ section{
     left: 50%;
     width: 200px;
     height: 3px;
-    background: black;
     transform: translateX(-50%);
-}
-
-.skilling{
-    font-weight:600 ;
-    color: black;
-    font-size: 40px;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
+ 
 }
 .skills .skills-content .right .info{
     margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .skills .skills-content .right span{
-    color: black;
+    color: white;
     font-weight: 500;
     font-size: 25px;
 }
 .skills .skills-content .right .line{
     height: 10px;
     width: 100%;
-    background: black;
     position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 10px whitesmoke;
 }
+
 .skills .skills-content .right .line::before{
     content: "";
     position: absolute;
@@ -356,6 +356,18 @@ section{
     left: 0;
     top: 0;
 }
+.skills-content{ animation: skills-content 2s;
+    width: 90%;
+}
+@keyframes skills-content {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+        }
+}
+
 .skills-content .right .html::before{
     width: 80%;
     background: green;
@@ -378,43 +390,41 @@ section{
     width: 50%;
     background: aqua;
 }
+/* =======END SKILL STYLE======== */
 
 
-
-/* projects page styling */
-
+/* =======PROJECT STYLE======= */
 .projects{
     background: black;
-
 }
 .container{
     min-height: 600px;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* Float four columns side by side */
 .container .column {
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
     height: 150px;
     width: 22%;
     padding: 25px;
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .container .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .container .row:after {
-    content: "";
-    display: table;
-    /* clear: both; */
-  }
+}
   
   /* Style the counter cards */
   .card {
-    box-shadow: 0 4px 8px 0 white; /* this adds the "card" effect */
+    box-shadow: 0 4px 8px 0 white;
     padding: 16px;
-    text-align: center;
+    /* text-align: center; */
     background-color: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 50px;
+    padding-left: 50px;
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */
@@ -425,71 +435,15 @@ section{
       margin-bottom: 20px;
     }
   }
-/* 
 
-.container .box{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background: green;
-    margin: 40px;
-    display: inline-block;
-}
-.container .box .imgbox{
-    position: relative;
-    overflow: hidden;
-}
-.container .box .imgbox img{
-    max-width: 100%;
-    transition: transform 2s;
-}
-.container .box:hover .imgbox img{
-    transform: scale(1);
-}
-
-.container .box .details{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background:rgba(0,0,0,.8);
-    transform: scaleY(0);
-    transition: transform .5s;
-}
-.container .box:hover .details{
-    transform: scaleY(1);
-
-}
-
-.container .box .details .content{
-
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: white;
-}
-.container .box .details .content h2{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-}
-
-.container .box .details .content p{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-} */
 
 /* contact page styling */
 .contacts .container{
+    max-width: 60vw;
+    margin: 0 auto;
     min-height: 600px;
-    margin: 50px auto 0;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 0px;
 }
 .contact-form input{
     width: 90%;
@@ -513,7 +467,7 @@ section{
     box-shadow: 0 0 20px;
 }
 #contact-section{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+    background: rgb(168, 4, 4);
     background-position: center;
 }
 #contact-section .container h2{
@@ -527,13 +481,13 @@ section{
     margin: 2%;
     cursor: pointer;
     border: 2px solid red;
-    color: black;
+    color: white;
     border-radius: 52px;
 }
 .contact-form i.fa:hover{
     cursor: pointer;
-    border: 2px solid black;
-    color: red;
+    border: 2px solid white;
+    color: black;
 }
 .form-info{
     font-size: 145x;
@@ -555,16 +509,14 @@ input{
     cursor: pointer;
     margin-left: 3%;
     background: red;
-    color: black;
+    color: white;
     border-radius: 6px;
-    border: solid black;
+    border: none;
+    outline: none;
     padding: 5px;
 }
 .submit:hover{
-    border: 2px solid black;
     background: black;
-    color:red;
-    cursor: pointer;
 }
 
 @media (max-width: 768px){
@@ -582,12 +534,13 @@ input{
 
 /* footer styling */
 footer{
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     flex-wrap: wrap;
-    background: rgb(124, 119, 119);
+    background: white;
 
 }
 footer span{
     color: black;
+    padding-left: 50%;
 }
