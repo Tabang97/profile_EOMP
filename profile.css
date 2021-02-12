@@ -394,47 +394,82 @@ section{
 
 
 /* =======PROJECT STYLE======= */
-.projects{
-    background: black;
+
+.projects {
+    padding: 60px 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;    
 }
-.container{
+.projects .port{
+    max-width: 60vw;
+    margin: 0 auto;
+    padding-top: inherit;
+    margin-top: 50px;
+}
+.projects .port .title{
+    font-size: 40px;
+}
+  
+.projects .container{
     min-height: 600px;
+    width: 100vw;
+    margin: 0 auto;
 }
+  
+.projects .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 35px;
+    box-shadow: 0 10px 29px 0 white;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+  
+.projects .box:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.projects .container .ttitle{
+    font-size: 50px;
+}
+  
+.projects .icon {
+    margin: 0 auto 15px auto;
+    padding-top: 12px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+  }
+  
+.projects .icon i {
+    font-size: 36px;
+    line-height: 1;
+}
+  
+.projects .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+}  
+
+  
+.projects .description {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+
 .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Float four columns side by side */
-.container .column {
-    display: flex;
-    flex-wrap: wrap;
-    height: 150px;
-    width: 22%;
-    padding: 25px;
-}
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 white;
-    padding: 16px;
-    /* text-align: center; */
-    background-color: #f1f1f1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    left: 50px;
-    padding-left: 50px;
-  }
-  
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
 
 
 /* contact page styling */
@@ -449,6 +484,7 @@ section{
     width: 90%;
     height: 34px;
 }
+
 .contact-form textarea{
     width: 90%;
     height: 100px;
@@ -492,7 +528,6 @@ section{
 .form-info{
     font-size: 145x;
     font-style: italic;
-    letter-spacing: 2px;
 }
 input{
     padding: 10px;
@@ -543,4 +578,75 @@ footer{
 footer span{
     color: black;
     padding-left: 50%;
+}
+
+
+.expreriences{
+    display: flex;
+    justify-content: center;
+}
+.expreriences .icon{
+    color: red;
+}
+
+.li_wrap{
+    color: white;
+}
+
+
+
+.expreriences .li_wrap{
+    display: flex;
+    margin-bottom: 15px;
+}
+.expreriences .li_wrap .date{
+    width: 200px;
+    color: green;
+}
+.expreriences .li_wrap .info{
+    width: calc(100% -125px);
+    padding-left: 25px;
+    position: relative;
+}
+.expreriences .li_wrap .info_title{
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 2px;
+color: red;
+}
+.expreriences .li_wrap .info_com{
+font-weight: 300;
+font-size: 15px;
+margin-top: 3px;
+}
+.expreriences .li_wrap .info_cont{
+    margin-top: 15px;
+}
+.expreriences .li_wrap .info::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: brown;
+    border-radius: 50%;
+}
+.expreriences .li_wrap .info::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    width: 2px;
+    height: 90%;
+    background: brown;
+}
+.expreriences h2{
+    color: red;
+    max-width: 60vw;
+    padding-top: inherit;
+    margin-top: -50px;
+    font-size: 40px;
+
+
 }
