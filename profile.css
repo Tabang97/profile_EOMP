@@ -189,7 +189,7 @@ header{
     height: 70vh;
     text-align: center;
     padding-top: 20%;
-    padding-left: 30%;
+    justify-content: center;
 
 }
 .intro-title{
@@ -250,57 +250,79 @@ header{
 
 /* ======ABOUT PAGE STYLING====== */
 .about{
-    background: black;
-
-}
-.Me img{
-    border-radius: 200px;
-    width: 270px;
+    background: url("images/Tabang\ Duda\ \(3.\).jpg") no-repeat left;
     object-fit: cover;
-}
-section{
-    padding:100px 0 ;
-}
-.title{
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    margin-bottom: 60px;
-    position: relative;
+    background-size: 50%;
+    background-color: white;
+    overflow: hidden;
+    padding: 100px 0;
 }
 
-.about-content{
+.inner-container{
+    float: right;
+    width: 50%;
+    background-color: black;
+    padding: 150px;
+}
+.inner-container h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    color: red;
+}
+.text{
+    font-size: 25px;
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.other-skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+    color: red;
+}
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 88px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        padding: 0;
+    }
+    .inner-container{
+        width: 60px;
+    }
+}
+
+.linking{
+    align-items: center;;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.about .about-content .pic {
-    margin: 0 auto 60px;
-}
-
-.bout .text{
-    font-size: 50px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.bout{
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 300px;
-    margin-left: 300px;
-}
-.linking{
-    align-items: center;
-    display: inline-block;
     background: red;
     color: white;
     font-weight: bold;
     border-radius: 6px;
     padding: 5px;
+}
+.linking:hover{
+    color: red;
+    background: white;
+
 }
 /* ========END ABOUT STYLE======== */
 
@@ -647,6 +669,4 @@ margin-top: 3px;
     padding-top: inherit;
     margin-top: -50px;
     font-size: 40px;
-
-
 }
