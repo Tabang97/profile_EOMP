@@ -20,7 +20,7 @@ header{
 :root {
     --navbar-height: 60px;
     --navbar-background-color: white;
-    --navbar-item-text-color-hover: gold;
+    --navbar-item-text-color-hover: red;
     --navbar-item-font: bold 1rem/1rem "Open Sans", Arial, Helvetica, sans-serif;
   }
   
@@ -75,6 +75,7 @@ header{
     background-color: var(--navbar-background-color);
     box-shadow: 0px 4px 4px 0px #00000088;
   }
+  
   
   .navbar #togglericon:checked ~ div.nav {
     visibility: visible;
@@ -186,7 +187,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     background-image: url("images/red.jpg");
-    height: 70vh;
+    height: 100vh;
     text-align: center;
     padding-top: 20%;
     justify-content: center;
@@ -250,79 +251,72 @@ header{
 
 /* ======ABOUT PAGE STYLING====== */
 .about{
-    background: url("images/Tabang\ Duda\ \(3.\).jpg") no-repeat left;
-    object-fit: cover;
-    background-size: 50%;
-    background-color: white;
-    overflow: hidden;
-    padding: 100px 0;
-}
-
-.inner-container{
-    float: right;
-    width: 50%;
-    background-color: black;
-    padding: 150px;
-}
-.inner-container h2{
-    margin-bottom: 30px;
-    font-size: 50px;
-    font-weight: 900;
-    color: red;
-}
-.text{
-    font-size: 25px;
-    color: white;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.other-skills{
     display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 20px;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.about-img{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.about > div,
+.about > img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+    object-position: 50% 30%;
+    max-height: 50vh;
+    margin: auto;
+}
+.about > {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    height: 50vh;
+}
+.about h2{
     color: red;
+    text-align: center;
+    /* margin: 10%; */
+    font-size: 40px;
 }
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 88px;
-    }
+.bout-text{
+    /* font-size: 15px; */
+    color: white;
+    /* line-height: 30px; */
+    text-align: center;
+    margin-bottom: 40px;
+    /* margin: 30px; */
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width: 768){
     .about{
-        background-size: 100%;
-        padding: 100px 40px;
+        flex-wrap: nowrap;
+        flex-direction: column;
     }
-    .inner-container{
+    .about > div,
+    .about > img {
         width: 100%;
     }
-}
-
-@media screen and (max-width:600px){
-    .about{
-        padding: 0;
-    }
-    .inner-container{
-        width: 60px;
+    .about > div:nth-child(odd){
+        background-color: #e9c46a;
     }
 }
-
-.linking{
-    align-items: center;;
-    display: flex;
-    flex-direction: column;
-    background: red;
+.cv{
     color: white;
+    background: red;
     font-weight: bold;
     border-radius: 6px;
     padding: 5px;
+    margin:20px;
+    width: 10vw;;
 }
-.linking:hover{
+.cv:hover{
     color: red;
     background: white;
-
 }
 /* ========END ABOUT STYLE======== */
 
@@ -330,25 +324,33 @@ header{
 /* =======SKILLS PAGE STYLE======== */
 .skills{
     background: black;
-    min-height: 660px;
+    /* min-height: 660px; */
+    height: 100vh;
+    padding-top: 40px;
 }
 .skills .port{
     max-width: 60vw;
     margin: 0 auto;
     padding-top: inherit;
-    margin-top: 50px;
+    margin-top: 10%;
 }
-.skills .title::before{
+.skills .port h2{
+    color: red;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 40px;
+}
+.skills .skills-title::before{
     content: "";
     position: absolute;
     bottom: 0px;
-    left: 50%;
+    left: 60%;
     width: 200px;
     height: 3px;
     transform: translateX(-50%);
 }
 .skills .skills-content .right .bars{
-    margin-bottom: 15px;
+    margin-bottom: 50px;
  
 }
 .skills .skills-content .right .info{
@@ -420,18 +422,15 @@ header{
 .projects {
     padding: 60px 0 40px 0;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
 .projects .port{
     max-width: 60vw;
     margin: 0 auto;
     padding-top: inherit;
     margin-top: 50px;
+    color: red;
 }
-.projects .port .title{
-    font-size: 40px;
-}
-  
 .projects .container{
     min-height: 600px;
     width: 100vw;
@@ -451,11 +450,7 @@ header{
 .projects .box:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-}
-.projects .container .ttitle{
-    font-size: 50px;
-}
-  
+}  
 .projects .icon {
     margin: 0 auto 15px auto;
     padding-top: 12px;
@@ -471,10 +466,11 @@ header{
     line-height: 1;
 }
   
-.projects .title {
+.projects .projects-title {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 20px;
+    font-size: 40px;
 }  
 
   
@@ -506,7 +502,11 @@ header{
     width: 90%;
     height: 34px;
 }
-
+.contact-title{
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+}
 .contact-form textarea{
     width: 90%;
     height: 100px;
@@ -585,37 +585,32 @@ input{
     .brand-name{margin-top: 20px;}
 }
 
-
-
-
-
-/* footer styling */
-footer{
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    background: white;
-
-}
-footer span{
-    color: black;
-    padding-left: 50%;
-}
-
+/* =====EPERIENCE & EDUCATION */
 
 .expreriences{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .expreriences .icon{
-    color: red;
+    color: black;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    font-size: 30px;
+    line-height: 70px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:red;
+    box-shadow: 0 5px 4px white;
 }
 
 .li_wrap{
     color: white;
 }
-
-
 
 .expreriences .li_wrap{
     display: flex;
@@ -663,10 +658,24 @@ margin-top: 3px;
     height: 90%;
     background: brown;
 }
-.expreriences h2{
+.expreriences .exper-title{
     color: red;
     max-width: 60vw;
     padding-top: inherit;
     margin-top: -50px;
     font-size: 40px;
+    text-align: center;
+}
+
+/* footer styling */
+footer{
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+
+}
+footer span{
+    color: black;
+    padding-left: 50%;
 }
