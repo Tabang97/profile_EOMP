@@ -260,6 +260,10 @@ header{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    justify-content: center;
+}
+.about-img img{
+    border-radius: 80px;
 }
 .about > div,
 .about > img {
@@ -269,6 +273,7 @@ header{
     object-position: 50% 30%;
     max-height: 50vh;
     margin: auto;
+
 }
 .about > {
     display: flex;
@@ -402,7 +407,7 @@ header{
     background: red;
 }
 .skills-content .right .js::before{
-    width: 50%;
+    width: 70%;
     background: blue;
 }
 .skills-content .right .css::before{
@@ -411,7 +416,7 @@ header{
 }
 
 .skills-content .right .mysql::before{
-    width: 50%;
+    width: 80%;
     background: aqua;
 }
 /* =======END SKILL STYLE======== */
@@ -473,7 +478,9 @@ header{
     font-size: 40px;
 }  
 
-  
+.projects .title{
+    color: red;
+}
 .projects .description {
     font-size: 20px;
     line-height: 28px;
@@ -665,6 +672,12 @@ margin-top: 3px;
     margin-top: -50px;
     font-size: 40px;
     text-align: center;
+}
+.work_exp h2{
+    color: red;
+}
+.education h2{
+    color: red;
 }
 
 /* footer styling */
