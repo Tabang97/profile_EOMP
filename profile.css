@@ -11,6 +11,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     background-color: black;
+    width: 99vw;
 }
 
 header{
@@ -257,45 +258,40 @@ header{
 }
 .about-img{
     display: flex;
-    width: 100vw;
     height: 100vh;
     object-fit: cover;
     justify-content: center;
 }
-.about-img img{
-    border-radius: 80px;
-}
+
 .about > div,
 .about > img {
     width: 50%;
     object-fit: cover;
-    border-radius: 5px;
     object-position: 50% 30%;
     max-height: 50vh;
     margin: auto;
 
 }
 .about > {
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 10%;
     height: 50vh;
 }
 .about h2{
     color: red;
     text-align: center;
-    /* margin: 10%; */
+    margin: 10%;
     font-size: 40px;
 }
 .bout-text{
-    /* font-size: 15px; */
+    padding-right: 20px;
+    font-size: 15px;
     color: white;
-    /* line-height: 30px; */
+    line-height: 20px;
     text-align: center;
     margin-bottom: 40px;
-    /* margin: 30px; */
+    margin-left: 30px;
 }
 @media screen and (max-width: 768){
     .about{
@@ -317,12 +313,12 @@ header{
     border-radius: 6px;
     padding: 5px;
     margin:20px;
-    width: 10vw;;
 }
 .cv:hover{
     color: red;
     background: white;
 }
+
 /* ========END ABOUT STYLE======== */
 
 
@@ -600,19 +596,14 @@ input{
     justify-content: center;
 }
 .expreriences .icon{
-    color: black;
-    top: 2%;
+    color: lime;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
     font-size: 30px;
     line-height: 70px;
     position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color:red;
-    box-shadow: 0 5px 4px white;
 }
 
 .li_wrap{
@@ -624,8 +615,8 @@ input{
     margin-bottom: 15px;
 }
 .expreriences .li_wrap .date{
-    width: 200px;
-    color: green;
+    width: 100px;
+    color: lime;
 }
 .expreriences .li_wrap .info{
     width: calc(100% -125px);
@@ -686,6 +677,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     background: white;
+    height: 5vh;
+    text-align: center;
 
 }
 footer span{
