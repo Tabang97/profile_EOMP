@@ -325,7 +325,6 @@ header{
 /* =======SKILLS PAGE STYLE======== */
 .skills{
     background: black;
-    /* min-height: 660px; */
     height: 100vh;
     padding-top: 40px;
 }
@@ -679,7 +678,6 @@ footer{
     background: white;
     height: 5vh;
     text-align: center;
-
 }
 footer span{
     color: black;

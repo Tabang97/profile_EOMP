@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body{
@@ -22,7 +22,7 @@ body{
 }
 .left{
     background: black;
-    width: 250px;
+    width: 300px;
     padding: 0 20px;
 }
 
@@ -33,9 +33,6 @@ body{
 .left .img_holder img{
     width: 200px;
     border-radius: 30px;
-    /* top: 100px;
-    height: 20%;
-    object-fit: cover; */
 }
 .pb{
     padding-bottom: 20px;
@@ -65,8 +62,9 @@ body{
     color: red;
 }
 .left .text{
-    color: gold;
-    font-size: 15px;
+    color: white;
+    font-size: 18px;
+    padding-top: 5px;
 }
 
 .contact .li_wrap{
@@ -115,10 +113,10 @@ body{
     width: calc(100% - 250px);
 }
 .header{
-    background: lime;
+    background: white;
     padding-bottom: 15px 30px;
     color: black;
-    height: 230px;
+    height: 240px;
     border-radius: 5px;
 }
 .header .name{
