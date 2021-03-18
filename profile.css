@@ -4,13 +4,13 @@
     scroll-behavior: smooth;
 }
 body{
-    /* margin: 0; */
+    margin: 0;
     padding: 0;
     font-family: sans-serif;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: black;
+    /* background-color: black; */
     width: 99vw;
 }
 
@@ -255,6 +255,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
+    background: white;
 }
 .about-img{
     display: flex;
@@ -266,11 +267,9 @@ header{
 .about > div,
 .about > img {
     width: 50%;
-    object-fit: cover;
     object-position: 50% 30%;
     max-height: 50vh;
     margin: auto;
-
 }
 .about > {
     justify-content: center;
@@ -279,15 +278,15 @@ header{
     height: 50vh;
 }
 .about h2{
-    color: red;
+    color: black;
     text-align: center;
     margin: 10%;
     font-size: 40px;
 }
 .bout-text{
     padding-right: 20px;
-    font-size: 15px;
-    color: white;
+    font-size: 20px;
+    color: black;
     line-height: 20px;
     text-align: center;
     margin-bottom: 40px;
@@ -308,15 +307,14 @@ header{
 }
 .cv{
     color: white;
-    background: red;
+    background: black;
     font-weight: bold;
     border-radius: 6px;
     padding: 5px;
     margin:20px;
 }
 .cv:hover{
-    color: red;
-    background: white;
+    color: black;
 }
 
 /* ========END ABOUT STYLE======== */
@@ -324,7 +322,7 @@ header{
 
 /* =======SKILLS PAGE STYLE======== */
 .skills{
-    background: black;
+    background: white;
     height: 100vh;
     padding-top: 40px;
 }
@@ -335,7 +333,7 @@ header{
     margin-top: 10%;
 }
 .skills .port h2{
-    color: red;
+    color: black;
     margin-bottom: 5%;
     text-align: center;
     font-size: 40px;
@@ -361,7 +359,7 @@ header{
     
 }
 .skills .skills-content .right span{
-    color: white;
+    color: black;
     font-weight: 500;
     font-size: 25px;
 }
@@ -370,7 +368,7 @@ header{
     width: 100%;
     position: relative;
     border-radius: 3px;
-    box-shadow: 0 0 10px whitesmoke;
+    box-shadow: 0 0 10px lime;
 }
 
 .skills .skills-content .right .line::before{
@@ -423,6 +421,7 @@ header{
     padding: 60px 0 40px 0;
     display: flex;
     flex-wrap: wrap;
+    background:white;
 }
 .projects .port{
     max-width: 60vw;
@@ -442,7 +441,7 @@ header{
     overflow: hidden;
     border-radius: 10px;
     margin: 35px;
-    box-shadow: 0 10px 29px 0 white;
+    box-shadow: 0 10px 29px 0 black;
     transition: all 0.3s ease-in-out;
     text-align: center;
 }
@@ -471,17 +470,16 @@ header{
     margin-bottom: 15px;
     font-size: 20px;
     font-size: 40px;
+    color: black;
+
 }  
 
-.projects .title{
-    color: red;
-}
 .projects .description {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 0;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .row{
@@ -499,6 +497,7 @@ header{
     min-height: 600px;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 40px;
 }
 .contact-form input{
     width: 90%;
@@ -527,7 +526,7 @@ header{
     box-shadow: 0 0 20px;
 }
 #contact-section{
-    background: rgb(168, 4, 4);
+    background: white;
     background-position: center;
 }
 #contact-section .container h2{
@@ -540,8 +539,8 @@ header{
     padding: 3%;
     margin: 2%;
     cursor: pointer;
-    border: 2px solid red;
-    color: white;
+    border: 2px solid black;
+    color: red;
     border-radius: 52px;
 }
 .contact-form i.fa:hover{
@@ -595,7 +594,7 @@ input{
     justify-content: center;
 }
 .expreriences .icon{
-    color: lime;
+    color: aqua;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -606,7 +605,7 @@ input{
 }
 
 .li_wrap{
-    color: white;
+    color: black;
 }
 
 .expreriences .li_wrap{
@@ -615,7 +614,7 @@ input{
 }
 .expreriences .li_wrap .date{
     width: 100px;
-    color: lime;
+    color: aqua;
 }
 .expreriences .li_wrap .info{
     width: calc(100% -125px);
@@ -675,11 +674,12 @@ footer{
     font-size: 15px;
     display: flex;
     flex-wrap: wrap;
-    background: white;
+    background: black;
     height: 5vh;
     text-align: center;
+    color: white;
 }
 footer span{
-    color: black;
+    color: white;
     padding-left: 50%;
 }
